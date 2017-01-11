@@ -1,4 +1,13 @@
 -------------------------------------------------------------------------------
 Test set: hello.HelloControllerTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.781 sec - in hello.HelloControllerTest
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.652 sec <<< FAILURE! - in hello.HelloControllerTest
+getHello(hello.HelloControllerTest)  Time elapsed: 0.084 sec  <<< FAILURE!
+java.lang.AssertionError: Response content
+Expected: "Greetings from Spring Boot!"
+     but: was "Greetings from Spring Boot! - It is Kubernetes ConfigMap"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.springframework.test.web.servlet.result.ContentResultMatchers$4.match(ContentResultMatchers.java:137)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:171)
+	at hello.HelloControllerTest.getHello(HelloControllerTest.java:29)
+
