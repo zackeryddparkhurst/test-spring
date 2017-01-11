@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: hello
+  namespace: spring-test-project
+  selfLink: /api/v1/namespaces/spring-test-project/configmaps/hello
+  uid: 63c6c7b8-d77f-11e6-93c3-525400ee9c8f
+  resourceVersion: '9952'
+  creationTimestamp: '2017-01-10T21:54:41Z'
+data:
+  application.yaml: "hello:\n  message: Kubernetes ConfigMap"

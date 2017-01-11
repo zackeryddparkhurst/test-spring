@@ -31,10 +31,21 @@
             <scope>test</scope>
         </dependency>
         <!-- end::tests[] -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-context</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.fabric8</groupId>
+            <artifactId>spring-cloud-starter-kubernetes</artifactId>
+            <version>${spring-cloud-kubernetes.version}</version>
+        </dependency>
     </dependencies>
 
     <properties>
         <java.version>1.8</java.version>
+        <spring-cloud.version>Brixton.SR7</spring-cloud.version>
+        <spring-cloud-kubernetes.version>0.1.4</spring-cloud-kubernetes.version>
     </properties>
 
     <build>
